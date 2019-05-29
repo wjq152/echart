@@ -89,6 +89,18 @@ export const constantRoutes = [
       }
     ]
   },
+  {
+    path: '/',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: '数据统计',
+        component: () => import('@/views/datatable/index'),
+        meta: { title: '数据统计', icon: 'chart' }
+      }
+    ]
+  },
 
   {
     path: '/nested',
